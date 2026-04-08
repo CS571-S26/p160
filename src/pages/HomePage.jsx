@@ -1,18 +1,22 @@
-import { useState } from 'react'
-import '../App.css'
-import { Button, Card } from 'react-bootstrap'
+import { Button, Image } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+import switchesImage from '../assets/switches.jpg'
 
-export default function HomePage() {
-  const [count, setCount] = useState(0)
-
+function HomePage() {
   return (
-    <div className="w-100 h-100 d-flex justify-content-center align-items-center">
-      <Card className='m-4 p-2'>
-        <Card.Body className='text-center'>
-          <h1>Hello World!</h1>
-          <Button onClick={() => setCount(o => o + 1)}>Count: {count}</Button>
-        </Card.Body>
-      </Card>
+    <div className="text-center">
+      <h1>Welcome to SwitchSearch</h1>
+      
+      <img src={switchesImage} alt="Mechanical keyboard switches" className="img-fluid rounded mb-4" style={{ maxWidth: '500px' }}/>
+
+
+      <p> SwitchSearch helps users explore different mechanical keyboard switches and compare their features.</p>
+      <p> Explore popular mechanical keyboard switches, and have some fun!</p>
+      <Button as={Link} to="/browse" variant="primary">
+        Browse Switches
+      </Button>
     </div>
   )
 }
+
+export default HomePage

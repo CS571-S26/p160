@@ -1,17 +1,18 @@
-import { Link, Outlet } from 'react-router-dom'
-import '../App.css'
+import { Outlet } from 'react-router-dom'
+import { Container } from 'react-bootstrap'
+import NavigationBar from './NavigationBar.jsx'
+import Footer from './Footer.jsx'
 
-export default function Layout() {
+function Layout() {
   return (
-    <div>
-      <nav className="m-3">
-        <Link to="/" className="me-3">Home</Link>
-        <Link to="/about/">About</Link>
-      </nav>
-
-      <main>
+    <>
+      <NavigationBar />
+      <Container className="mt-4 mb-4">
         <Outlet />
-      </main>
-    </div>
+      </Container>
+      <Footer />
+    </>
   )
 }
+
+export default Layout
