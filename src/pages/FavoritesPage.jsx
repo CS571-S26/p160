@@ -12,6 +12,7 @@ function FavoritesPage(props) {
             <Col key={switchObj.id} xs={12} md={6} lg={4} className="mb-4">
               <SwitchCard
                 switchData={switchObj}
+                currentUser={props.currentUser}
                 isFavorite={true}
                 handleToggleFavorite={props.handleToggleFavorite}
               />

@@ -13,6 +13,9 @@ function FilterBar(props) {
         <option value="Linear">Linear</option>
         <option value="Tactile">Tactile</option>
         <option value="Clicky">Clicky</option>
+        <option value="Silent Linear">Silent Linear</option>
+        <option value="Silent Tactile">Silent Tactile</option>
+        <option value="Hall Effect">Hall Effect</option>
       </Form.Select>
     </Form.Group>
   )
