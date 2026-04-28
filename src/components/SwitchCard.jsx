@@ -12,9 +12,28 @@ function SwitchCard(props) {
 
     handleToggleFavorite(switchData)
   }
+  // Determine the correct image source, using placeholder if not available
+  // used ai assistance to handle image path correctly with Vite's import.meta.env.BASE_URL
+    const imageSrc = switchData.image
+    ? `${import.meta.env.BASE_URL}switch-images/${switchData.image}`
+    : `${import.meta.env.BASE_URL}switch-images/placeholder.jpg`
+    return (
+    <Card className="h-100 switch-card border-0 shadow-sm" style={{ borderRadius: '18px' }}>
+      <Card.Img
+      variant="top"
+      src={imageSrc}
+      alt={switchData.name}
+      className="switch-image"
+      style={{
+        height: '200px',
+        objectFit: 'contain',
+        padding: '1rem',
+        backgroundColor: '#fff',
+        borderTopLeftRadius: '18px',
+        borderTopRightRadius: '18px'
+      }}
+      />
 
-  return (
-    <Card  className="h-100 switch-card border-0 shadow-sm" style={{ borderRadius: '18px' }}>
       <Card.Body>
         <Card.Title>{switchData.name}</Card.Title>
         
