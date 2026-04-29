@@ -22,7 +22,7 @@ function BrowsePage(props) {
 
   return (
     <div>
-      <h2>Browse Switches</h2>
+      <h1>Browse Switches</h1>
 
       <SearchBar
         searchTerm={searchTerm}

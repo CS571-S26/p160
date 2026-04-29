@@ -110,7 +110,7 @@ function SwitchDetailsPage(props) {
     setReviews(updatedReviews)
     localStorage.setItem(`reviews-${switchObj.id}`, JSON.stringify(updatedReviews))
 
-    setRating('')
+    setRating(0)
     setComment('')
     alert('Review submitted!')
   }
@@ -118,7 +118,7 @@ function SwitchDetailsPage(props) {
   return (
   <>
   {/* switch details section */}
-  <h2>{switchObj.name}</h2>
+  <h1>{switchObj.name}</h1>
 <Card className="mt-3 border-0 shadow-sm" style={{ borderRadius: '18px' }}>
   <Card.Body>
     <div className="row align-items-start">
@@ -172,7 +172,7 @@ function SwitchDetailsPage(props) {
 
     {embedLink && (
       <div className="mt-4">
-        <h4>Sound Test</h4>
+        <h2>Sound Test</h2>
         <div className="ratio ratio-16x9">
           <iframe
             src={embedLink}

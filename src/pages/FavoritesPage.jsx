@@ -4,7 +4,7 @@ import SwitchCard from '../components/SwitchCard.jsx'
 function FavoritesPage(props) {
   return (
     <div>
-      <h2>Favorite Switches</h2>
+      <h1>Favorite Switches</h1>
 
       {props.favoriteSwitches.length > 0 ? (
         <Row>
